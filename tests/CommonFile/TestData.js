@@ -1,24 +1,26 @@
 const TezosTestData = {
 
-    TokenCreator: {
+    TokenCreation: {
         TokenName: "My token name",
         TokenDescription: "My Token Descriptions",
-        TC02TokenDescription: "",
+        TC01_02TokenDescription: "",
         SupplyToken: "100",
         Decimals: "18",
         Symbol: "#",
         Icon: "Picture.PNG",
         WalletAddress: "tz1LCFwczMiEuNHcMvpqgNzzEs8f4FNBgyNK",
         Amount: "100",
+        TC01_03Amount:"10",
+        
     },
 
-    DAOCreate: {
-        DAOName: "Decentralized Governance Initiative",
-        TokenAddress: "KT1EHxvnhn5gX9EcNyFsp3y1HnKCBM2JjXpm",
+    DAOCreation: {
+        DAOName: "My Test DAO",
+        TokenAddress: "KT1ND3pDj67PqfjvzqPUAvSRqmcqcHnqpiEQ",
         TokenID: "0",
         GuardianAddress: "tz1LCFwczMiEuNHcMvpqgNzzEs8f4FNBgyNK",
         Description: "A DAO focused on funding and promoting open-source projects related to sustainability and renewable energy.",
-        TC04DAODescription: "",
+        TC02_02DAODescription: "",
         VotingDays: '00',
         VotingHours: '01',
         VotingMinutes: "00",
@@ -26,7 +28,7 @@ const TezosTestData = {
         ExecutionHours: "00",
         ExecutionMinutes: "01",
         ThresholdExpiryDays: "01",
-        ThresholdExpiryHours: "00",
+        ThresholdExpiryHours: "01",
         ThresholdExpiryMinutes: "00",
         QuorumThreshold: '2',
         QuorumChange: '2',
@@ -46,16 +48,16 @@ const TezosTestData = {
     },
 
     ChangeGuardian: {
-        WalletAddress: "tz1VxgGHwU6T6MaWrzfCBSpg2tw823KWVbk6",
+        WalletAddress: "tz1LCFwczMiEuNHcMvpqgNzzEs8f4FNBgyNK",
 
     },
 
     ChangeDelegate: {
-        NewDelegateAddress: "tz1VxgGHwU6T6MaWrzfCBSpg2tw823KWVbk6",
+        NewDelegateAddress: "tz1LCFwczMiEuNHcMvpqgNzzEs8f4FNBgyNK",
     },
 
     TransferToken: {
-        RecipientAddress: "tz1VxgGHwU6T6MaWrzfCBSpg2tw823KWVbk6",
+        RecipientAddress: "tz1LCFwczMiEuNHcMvpqgNzzEs8f4FNBgyNK",
         Asset: "SRD",
         Amount: "10",
         AgoraPostID: "10",
