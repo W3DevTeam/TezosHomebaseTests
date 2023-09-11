@@ -4,8 +4,10 @@ const { pageLocators } = require("../CommonFile/Locator");
 const { TezosTestData } = require("../CommonFile/TestData");
 
 test('Test Case 3 : Create DAO Successfully', async ({ page }) => {
+   
+    const tokenAddress = global.sharedData.tokenAddress;  // Access the Token Address from the shared global object
     
-    test.setTimeout(10 * 60 * 1000); //Extending Test Case timeout to 10 minutes
+    test.setTimeout(5 * 60 * 1000); //Extending Test Case timeout to 5 minutes
 
     await changeNetwork(page); //PreConditions Open URL and Selecting the Ghost-net
 
@@ -19,7 +21,7 @@ test('Test Case 3 : Create DAO Successfully', async ({ page }) => {
 
     await page.fill(pageLocators.DAOCreate.DAOName, TezosTestData.DAOCreate.DAOName);  //Fill DAO Name
 
-    await page.fill(pageLocators.DAOCreate.TokenAddress, TezosTestData.DAOCreate.TokenAddress); //Fill Token Address
+    await page.fill(pageLocators.DAOCreate.TokenAddress, tokenAddress); //Fill Token Address
 
     await page.fill(pageLocators.DAOCreate.TokenID, TezosTestData.DAOCreate.TokenID); //Fill Token ID 
 
@@ -104,6 +106,8 @@ test('Test Case 3 : Create DAO Successfully', async ({ page }) => {
     const content = await page.content(); //Assume Page
 
     const isTextVisible = content.includes(pageLocators.DAOCreate.DAOText, { visible: true });  //Verify that text visible on the webpage
+
+    console.log(isTextVisible); //Show the Results of True of false
 
     console.log("The DAO is successfully created and the user is redirected to a confirmation page that links to the newly created DAO");
 

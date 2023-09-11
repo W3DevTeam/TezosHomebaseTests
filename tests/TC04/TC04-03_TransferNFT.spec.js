@@ -4,13 +4,13 @@ const { pageLocators } = require("../CommonFile/Locator");
 const { TezosTestData } = require("../CommonFile/TestData");
 const path = require('path');
 
-test('Test case 5: Transfer NFT ', async ({ page }) => {
-
+test('Test case 3: Transfer NFT ',  async ({ page }) => {
+ 
     await PreProposal(page);   //PreConditions Open URL and Open Mask DAO For Proposal
 
     try {
 
-        test.setTimeout(10 * 60 * 1000); //Extending Test Case timeout to 10 minutes
+        test.setTimeout(5 * 60 * 1000); //Extending Test Case timeout to 5 minutes
 
         await page.click(pageLocators.OffChainPoll.cycle);  // Click on Running Cycle Status
 

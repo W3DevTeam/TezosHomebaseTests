@@ -1,8 +1,8 @@
 const pageLocators = {
 
   TokenCreator: {
-    MainNet:"//p[text()='Mainnet']",
-    GhostNet:"//h6[text()='Ghostnet']",
+    MainNet: "//p[text()='Mainnet']",
+    GhostNet: "//h6[text()='Ghostnet']",
     EnterApp: ".MuiButtonBase-root.MuiButton-root.MuiButton-contained.jss11.jss12.MuiButton-containedSecondary",
     frame: "div.MuiGrid-root.MuiGrid-container.MuiGrid-align-items-xs-center.MuiGrid-justify-content-xs-center",
     ConnectWallet: "//span[text()='Connect Wallet']",
@@ -20,7 +20,7 @@ const pageLocators = {
     ContinueButton2: "//p[text()='Continue']",
     launch: "//p[text()='Launch']",
     DeployText: "Governance token successfully deployed",
-    ConsoleAddress: "p[class='MuiTypography-root-165 MuiTypography-body1-167 MuiTypography-colorTextSecondary-191']",
+    ConsoleAddress: "//p[@class='MuiTypography-root-165 MuiTypography-body1-167 MuiTypography-colorTextSecondary-191']",
     ErrorText: "Required",
   },
 
@@ -44,16 +44,16 @@ const pageLocators = {
     ThresholdExpiryDays: "//input[@name='proposalExpiryBlocksDay']",
     ThresholdExpiryHours: "//input[@name='proposalExpiryBlocksHours']",
     ThresholdExpiryMinutes: "//input[@name='proposalExpiryBlocksMinutes']",
-    Slider:"span[role='slider']",
+    Slider: "span[role='slider']",
     RequireStake: "//input[@name='proposeStakeRequired']",
     MinAmount: "//input[@name='minXtzAmount']",
     MaxAmount: "//input[@name='maxXtzAmount']",
     ContinueButton3: "//p[text()='Continue']",
-    QuorumThreshold:"//input[@name='quorumThreshold']",
-    QuorumChange:"//input[@name='quorumChange']",
-    MinQuorumAmount:"//input[@name='minQuorumAmount']",
-    QuorumMaxChange:"//input[@name='quorumMaxChange']",
-    MaxQuorumAmount:"//input[@name='maxQuorumAmount']",
+    QuorumThreshold: "//input[@name='quorumThreshold']",
+    QuorumChange: "//input[@name='quorumChange']",
+    MinQuorumAmount: "//input[@name='minQuorumAmount']",
+    QuorumMaxChange: "//input[@name='quorumMaxChange']",
+    MaxQuorumAmount: "//input[@name='maxQuorumAmount']",
     ContinueButton4: "//p[text()='Continue']",
     ContinueButton5: "//p[text()='Continue']",
     SelfDeployed: " //p[text()='Self-Deployed']",
@@ -63,26 +63,55 @@ const pageLocators = {
     ErrorText: "Required",
   },
 
-  ChangeConfiguration: {
-    DAOConfiguration: "//p[text()='DAO Configuration']",
-    ProposalFee: "//input[@name='frozen_extra_value']",
-    ReturnedTokenPercentage: "//input[@name='returnedPercentage']",
-    SubmitButton: "//span[text()='Submit']",
-    TransactionText: "",
+  AcceptDelegation:{
+    EditButton:"//p[text()='Edit']",
+    AcceptButton:"//input[@value='ACCEPT_DELEGATIONS']",
+    SubmitButton:"//span[text()='Submit']",
+    TransactionText:"Delegate transaction confirmed",
   },
 
-  ChangeGuardian: {
-    ChangeGuardian: "//p[text()='Change Guardian']",
-    WalletAddress: "input[placeholder=' tz1...']",
-    SubmitButton: '//span[text()="Submit"]',
-    TransactionText: "Guardian change proposal transaction confirmed",
+  TokenStaking: {
+    User: "//p[text()='User']",
+    Deposit: "//span[text()='Deposit']",
+    PassAmount: "//input[@placeholder='0']",
+    UseMax: "//p[text()='Use Max']",
+    Submit: "//span[text()='Submit']",
+    TransactionText: "Deposit transaction confirmed",
+    Balance: "//div[@class='MuiGrid-root MuiGrid-container MuiGrid-item MuiGrid-justify-content-xs-space-between']",
   },
 
-  ChangeDelegate: {
-    ChangeDelegate: "//p[text()='Change Delegate']",
-    NewDelegateAddress: "input[placeholder=' tz1...']",
-    SubmitButton: "//span[text()='Submit']",
-    TransactionText: "Delegation change proposal transaction confirmed",
+  OffChainPoll: {
+    DAO: "//p[text()='M DAO']", 
+    Proposal: "//p[text()='Proposals']",
+    cycle: "//p[text()='Creating']",
+    NewProposal: "//span[text()='New Proposal']",
+    OffChainPoll: "//p[text()='Off Chain Poll']",
+    ProposalTitle: "input[placeholder='Proposal Title*']",
+    ShortDescription: "textarea[placeholder='Short description']",
+    ExternalLink: "input[placeholder='External Link']",
+    multipleChoice: "input[value='1']",
+    Choice1: "input[placeholder='Choice 1']",
+    AddChoice: ".MuiButtonBase-root.MuiIconButton-root.MuiIconButton-sizeSmall",
+    Choice2: "input[placeholder='Choice 2']",
+    Choice3: "input[placeholder='Choice 3']",
+    DD: "input[placeholder='DD']",
+    HH: "input[placeholder='HH']",
+    MM: "input[placeholder='MM']",
+    CreateProposalButton: "button[class='MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSecondary']",
+    CreateText: "Proposal created",
+  },
+
+  VoteOnOffChainPoll: {
+    ProposalTitle: "//h4[text()='GOV']",
+    Choice1: "//p[text()='Democracy']",
+    Choice2: "//p[text()='Exploration']",
+    CastYourVote: "//span[text()='Cast your vote']",
+    VoteDone: "Your vote has been submitted",
+  },
+
+  CorrectVoteCount: {
+    VoteCount: "div[class='MuiGrid-root MuiGrid-container MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-6 MuiGrid-grid-lg-6'] p[class='MuiTypography-root MuiTypography-body1 MuiTypography-colorSecondary']",
+    Options: "//div[@class='MuiGrid-root MuiGrid-container MuiGrid-item MuiGrid-justify-content-xs-flex-end MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-lg-6']",
   },
 
   TransferToken: {
@@ -94,6 +123,14 @@ const pageLocators = {
     AgoraPostID: "input[placeholder='Type an Agora Post ID']",
     SubmitButton: "//span[normalize-space()='Submit']",
     TransactionText: "Registry proposal transaction confirmed",
+  },
+
+  ChangeConfiguration: {
+    DAOConfiguration: "//p[text()='DAO Configuration']",
+    ProposalFee: "//input[@name='frozen_extra_value']",
+    ReturnedTokenPercentage: "//input[@name='returnedPercentage']",
+    SubmitButton: "//span[text()='Submit']",
+    TransactionText: "",
   },
 
   TransferNFT: {
@@ -115,7 +152,7 @@ const pageLocators = {
     AddLambda: "//p[text()='Add Lambda']",
     TestBox: ".npm__react-simple-code-editor__textarea",
     SubmitButton: "//span[text()='Submit']",
-    TransactionText: "",
+    TransactionText: "Add Lambda proposal transaction confirmed",
 
   },
 
@@ -123,16 +160,31 @@ const pageLocators = {
     RemoveLambda: "//p[text()='Remove Lambda']",
     SearchBox: "#combo-box-demo",
     SubmitButton: "//span[text()='Submit']",
-    TransactionText:"",
+    TransactionText: "Remove Lambda proposal transaction confirmed",
   },
 
   ExecuteLambda: {
     ExecuteLambda: "//p[text()='Execute Lambda']",
     SearchBox: "#combo-box-demo",
-    LambdaArgumentsCode: 'Write Michelson Code for the input Paramerers of your Lambda\n\nEg:-\n\n{\n  "prim": "pair",\n  "annots": [\n    "%xtz_transfer_type"\n  ],\n  "args": [\n    {\n      "prim": "mutez",\n      "annots": [\n        "%amount"\n      ]\n    },\n    {\n      "prim": "address",\n      "annots": [\n        "%recipient"\n      ]\n    }\n  ]\n},\n',
-    LambdaParams: 'Enter the values for the given params in a JSON/JavaScript Object format.\n\nEg:-\n\n{\n  xtz_transfer_type: {\n    amount: 10000000000000000000,\n    recipient: "tz1VSUr8wwNhLAzempoch5d6hLRiTh8Cjcjb"\n  }\n}\n  ',
+    Dropdown: "//button[@class='MuiButtonBase-root MuiIconButton-root MuiAutocomplete-popupIndicator']",
+    LambdaArgumentsCode: "//textarea[@placeholder='Write Michelson Code for the input Paramerers of your Lambda']",
+    LambdaParams: "Enter the values for the given params in a JSON/JavaScript Object format",
     SubmitButton: "//span[text()='Submit']",
-    TransactionText:"",
+    TransactionText: "Execute Lambda proposal transaction confirmed",
+  },
+
+  ChangeDelegate: {
+    ChangeDelegate: "//p[text()='Change Delegate']",
+    NewDelegateAddress: "input[placeholder=' tz1...']",
+    SubmitButton: "//span[text()='Submit']",
+    TransactionText: "Delegation change proposal transaction confirmed",
+  },
+  
+  ChangeGuardian: {
+    ChangeGuardian: "//p[text()='Change Guardian']",
+    WalletAddress: "input[placeholder=' tz1...']",
+    SubmitButton: '//span[text()="Submit"]',
+    TransactionText: "Guardian change proposal transaction confirmed",
   },
 
   VoteOnProposal: {
@@ -140,17 +192,21 @@ const pageLocators = {
     OnChainButton: "//button[@class='MuiButtonBase-root MuiButton-root MuiButton-text jss417']",
     Active: "//p[text()='Active']",
     Pending: "//p[text()='Pending']",
+    NoQuorum: "//p[text()='No Quorum']",
+    Expired: "//p[text()='Expired']",
+    Rejected: "//p[text()='Rejected']",
     VoteFor: "//span[text()='Vote For']",
     VoteAgainst: "//span[text()='Vote Against']",
     UseMax: "//p[text()='Use Max']",
+    Amount: "//input[@placeholder='Type an Amount']",
     Submit: "//span[text()='Submit']",
     View: "//span[text()='View']",
     Support: ".MuiGrid-root.MuiGrid-container.MuiGrid-item.MuiGrid-wrap-xs-nowrap.MuiGrid-align-items-xs-baseline.MuiGrid-grid-md-12",
     Oppose: ".MuiGrid-root.MuiGrid-container.MuiGrid-wrap-xs-nowrap.MuiGrid-align-items-xs-center.MuiGrid-grid-md-12",
-
+    TransactionText: "Vote transaction confirmed",
   },
 
-  ProposalExecutionAndDrop: {
+  ProposalExecution: {
     PassedExecutable: "//p[text()='Passed - Executable']",
     Passed: "//p[text()='Passed']",
     NoQuorum: "//p[text()='No Quorum']",
@@ -159,53 +215,12 @@ const pageLocators = {
     PercentageText: "//p[@class='MuiTypography-root jss1339 jss1340 MuiTypography-body1']",
     DropExpired: "//span[text()='Drop Expired']",
     Execute: "//span[text()='Execute']",
+    TransactionText: "Execute proposal transaction confirmed",
   },
 
-  OffChainPoll: {
-    MaskDAO: "//p[text()='Mask DAO']",
-    Proposal: "//p[text()='Proposals']",
-    cycle: "//p[text()='Creating']",
-    NewProposal: "//span[text()='New Proposal']",
-    OffChainPoll: "//p[text()='Off Chain Poll']",
-    ProposalTitle: "input[placeholder='Proposal Title*']",
-    ShortDescription: "textarea[placeholder='Short description']",
-    ExternalLink: "input[placeholder='External Link']",
-    multipleChoice: "input[value='1']",
-    Choice1: "input[placeholder='Choice 1']",
-    AddChoice: ".MuiButtonBase-root.MuiIconButton-root.MuiIconButton-sizeSmall",
-    Choice2: "input[placeholder='Choice 2']",
-    Choice3: "input[placeholder='Choice 3']",
-    DD: "input[placeholder='DD']",
-    HH: "input[placeholder='HH']",
-    MM: "input[placeholder='MM']",
-    CreateProposalButton: "button[class='MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSecondary']",
-    CreateText: "//div[text()='Proposal created!']",
-    CloseButton:'.MuiBox-root > .MuiSvgIcon-root',
-  },
-
-  VoteOnOffChainPoll: {
-    ProposalName: "//h4[text()='Community Governance']",
-    Option1: "//div[@class='Introduce Liquid Democracy']",
-    Option2: "//p[text()='Increase Proposal Exploration Period']",
-    CastYourVote: "//span[text()='Cast your vote']",
-    VoteDone: "Your vote has been submitted",
-  },
-
-  CorrectVoteCount: {
-    VoteCount: "div[class='MuiGrid-root MuiGrid-container MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-6 MuiGrid-grid-lg-6'] p[class='MuiTypography-root MuiTypography-body1 MuiTypography-colorSecondary']",
-    Options: "//div[@class='MuiGrid-root MuiGrid-container MuiGrid-item MuiGrid-justify-content-xs-flex-end MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-lg-6']",
-   
-
-  },
-
-  TokenStaking: {
-    User: "//p[text()='User']",
-    Deposit: "//span[text()='Deposit']",
-    PassAmount: "//input[@placeholder='0']",
-    UseMax: "//p[text()='Use Max']",
-    Submit: "//span[text()='Submit']",
-    TransactionText: "Deposit transaction confirmed",
-    Balance:"//div[@class='MuiGrid-root MuiGrid-container MuiGrid-item MuiGrid-justify-content-xs-space-between']",
+  ProposalDrop: {
+    ProposalDrop: "//span[text()='Drop Proposal']",
+    TransactionText: "Drop proposal transaction confirmed",
   },
 
   UnStakingToken: {
@@ -219,6 +234,7 @@ const pageLocators = {
     UseMax: "//p[text()='Use Max']",
     Submit: "//span[text()='Submit']",
     TransactionText: "Withdrawal transaction confirmed",
+    AvailableBalance: "0",
   }
 
 };
