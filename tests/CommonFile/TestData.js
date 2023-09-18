@@ -1,27 +1,27 @@
 const TezosTestData = {
 
     TokenCreator: {
-        TokenName: "My token name",
-        TokenDescription: "My Token Descriptions",
+        TokenName: `New${Math.floor(+new Date() / 1000)}Token`,
+        TokenDescription: "My Silver Descriptions",
         TC02TokenDescription: "",
-        SupplyToken: "100",
-        Decimals: "18",
-        Symbol: "#",
+        SupplyToken: "1000000",
+        Decimals: "11",
+        Symbol: "$",
         Icon: "Picture.PNG",
         WalletAddress: "tz1LCFwczMiEuNHcMvpqgNzzEs8f4FNBgyNK",
-        Amount: "100",
+        Amount: "1000000",
     },
 
     DAOCreate: {
-        DAOName: "Decentralized",
-        TokenAddress: "KT1Dmxer8pvx8vTUX5V2k44th4DqnKsjhUya",
+        DAOName: `New${Math.floor(+new Date() / 1000)}DAO`,
         TokenID: "0",
+        TokenAddress: "KT1VPiQUCrYSzicaNa5yWhndt7K19HYUCGzP",
         GuardianAddress: "tz1LCFwczMiEuNHcMvpqgNzzEs8f4FNBgyNK",
         Description: "A DAO focused on funding and promoting open-source projects related to sustainability and renewable energy.",
         TC04DAODescription: "",
         VotingDays: '00',
         VotingHours: '00',
-        VotingMinutes: "03",
+        VotingMinutes: "07",
         ExecutionDays: "00",
         ExecutionHours: "00",
         ExecutionMinutes: "01",
@@ -34,46 +34,48 @@ const TezosTestData = {
         QuorumMaxChange: '19',
         MaxQuorumAmount: '90',
         RequiredStake: "10",
-        MinAmount: "10",
-        MaxAmount: "20",
+        MinAmount: "1",
+        MaxAmount: "200000",
+    },
+
+    OffChainPoll: {
+        ProposalTitle: "GOV",
+        ShortDescription: "This proposal aims to conduct an off-chain poll to gather community input on potential upgrades to the Tezos governance process.",
+        ExternalLink: "https://tezos-gov-upgrades.com",
+        Choice1: "Democracy",
+        Choice2: "Exploration",
+        DD: "00",
+        HH: "00",
+        MM: "20",
     },
 
     ChangeConfiguration: {
-
-        ProposalFee: "1",
-        ReturnedTokenPercentage: "1",
-
+        ProposalFee: "14",
+        ReturnedTokenPercentage: "63"
     },
 
     ChangeGuardian: {
-        WalletAddress: "tz1VSUr8wwNhLAzempoch5d6hLRiTh8Cjcjb",
-
+        WalletAddress: "tz1hhjjjnCe7ePEKGRaArKzqyKpgQtrTK3RD",
     },
 
     ChangeDelegate: {
-        NewDelegateAddress: "tz1VxgGHwU6T6MaWrzfCBSpg2tw823KWVbk6",
+        NewDelegateAddress: "tz1LY2KJKKkXbA7EoN8K2rd8X1GDgcfj5zy6",
     },
 
     TransferToken: {
-        RecipientAddress: "tz1VxgGHwU6T6MaWrzfCBSpg2tw823KWVbk6",
-        Asset: "SRD",
-        Amount: "10",
-        AgoraPostID: "10",
-    },
-
-    TransferNFT: {
-
+        RecipientAddress: "tz1MBFA5nJgPgkp1ThXHcSs4YLuUrHmUM1Ef",
+        Asset: "$",
+        Amount: "12",
+        AgoraPostID: "0",
     },
 
     EditRegistry: {
-        Key: "Hello",
-        Value: "Hi",
-
+        Key: "Home ",
+        Value: "Documents",
     },
 
     AddLambda: {
-        MichelsonCode: ".npm__react-simple-code-editor__textarea",
-
+        MichelsonCode: "Extract the lambda and an integer from the parameter",
     },
 
     RemoveLambda: {
@@ -81,43 +83,21 @@ const TezosTestData = {
     },
 
     ExecuteLambda: {
-        SearchText: "transfer_proposal",
         LambdaArgumentsCode: "Write Michelson Code For the Input",
         LambdaParams: "Enter the values for the given params in a JSON/JavaScript Object format.",
-
     },
 
     VoteOnProposal: {
-
+        Amount: "300000",
     },
 
-    ProposalExecutionAndDrop: {
-        Execute: "//span[text()='Execute']",
-        DropExpired: "//span[text()='Drop Expired']",
-    },
-
-
-    OffChainPoll: {
-        ProposalTitle: "Community Governance",
-        ShortDescription: "This proposal aims to conduct an off-chain poll to gather community input on potential upgrades to the Tezos governance process.",
-        ExternalLink: "https://examplelink.com/tezos-gov-upgrades-poll",
-        Choice1: "Introduce Liquid Democracy",
-        Choice2: "Increase Proposal Exploration Period",
-        CreateProposalButton: "button[class='MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSecondary']",
-        DD: "01",
-        HH: "05",
-        MM: "00",
-    },
 
     TokenStaking: {
-        Amount: "000+-e"
+        Amount: "20"
     },
 
     TokenWithdrawal: {
-        Amount: "23456E_+",
+        Amount: "50",
     },
-
-
-
 }
 export { TezosTestData };
